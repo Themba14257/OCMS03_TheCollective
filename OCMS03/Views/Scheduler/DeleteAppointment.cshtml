@@ -1,0 +1,12 @@
+﻿@model OCMS03.Models.Content.Appointment
+
+@{
+    ViewData["Title"] = "DeleteAppointment";
+    Layout = "~/Views/Shared/_UsersLayout.cshtml";
+}
+
+
+    
+    <form asp-action="DeleteAppointment">
+        <input type="hidden" asp-for="AppointmentId" />
+    </form>

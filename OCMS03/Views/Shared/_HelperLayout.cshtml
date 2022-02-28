@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Help Center</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Raleway:400,700&display=swap" rel="stylesheet">
+
+    <link href="~/help/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/help/vendor/icofont/icofont.min.css" rel="stylesheet" />
+    <link href="~/help/vendor/line-awesome/css/line-awesome.min.css" rel="stylesheet" />
+    <link href="~/help/vendor/aos/aos.css" rel="stylesheet" />
+    <link href="~/help/vendor/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="~/help/css/style.css" rel="stylesheet" />
+    <link href="~/help/style.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <div class="collapse navbar-collapse custom-navmenu" id="main-navbar">
+        <div class="container py-2 py-md-5">
+            <div class="row align-items-start">
+                <div class="col-md-2">
+                    <ul class="custom-menu">
+                        <li class="active"><a asp-action="Index" asp-controller="Home">Home</a></li>
+                        <li><a asp-action="Login" asp-controller="Account">Sign In</a></li>
+                        <li><a asp-action="Register" asp-controller="Account">Sign Up</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 d-none d-md-block  mr-auto">
+                    <div class="tweet d-flex">
+                        <span class="icofont-hospital text-white mt-2 mr-3"></span>
+                        <div>
+                            <div class="pr-md-4 pl-md-0 pl-3 text">
+                                <p class="con"><strong><span>OCMO03</span> <span>Health Care</span></strong></p>
+                                <p class="con">The Most Valuable Thing Is Your Health</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-none d-md-block">
+                    <div class="row justify-content-center mb-5 pb-3">
+                        <div class="col-md-7 text-center heading-section heading-section-white ftco-animate fadeInUp ftco-animated">
+
+                            <h2 class="mb-4">Your Health Comes First</h2>
+                            <span class="subheading">Online  booking system for any government health sectors around SA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <nav class="navbar navbar-light custom-navbar pb-5">
+        <div class="container">
+            <a class="navbar-brand" asp-controller="Account" asp-action="Helper">Help Center</a>
+
+            <a href="#" class="burger" data-toggle="collapse" data-target="#main-navbar">
+                <span></span>
+            </a>
+
+        </div>
+    </nav>
+
+    <main id="main">
+        <div class="container pb-4"> 
+            @RenderBody()
+        </div>
+           
+
+        <div class="site-section pt-0">
+            <div class="container">
+
+                @*<div class="owl-carousel testimonial-carousel">
+
+                    <div class="testimonial-wrap">
+                        <div class="testimonial">
+                            <img src="img/person_1.jpg" alt="Image" class="img-fluid">
+                            <blockquote>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis
+                                    explicabo inventore.
+                                </p>
+                            </blockquote>
+                            <p>&mdash; Jean Hicks</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-wrap">
+                        <div class="testimonial">
+                            <img src="img/person_2.jpg" alt="Image" class="img-fluid">
+                            <blockquote>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis
+                                    explicabo inventore.
+                                </p>
+                            </blockquote>
+                            <p>&mdash; Chris Stanworth</p>
+                        </div>
+                    </div>
+
+                </div>*@
+
+            </div>
+        </div>
+    </main>
+    
+
+
+    <script src="~/help/vendor/jquery/jquery.min.js"></script>
+    <script src="~/help/vendor/jquery/jquery-migrate.min.js"></script>
+    <script src="~/help/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/help/vendor/easing/easing.min.js"></script>
+    <script src="~/help/vendor/php-email-form/validate.js"></script>
+    <script src="~/help/vendor/isotope/isotope.pkgd.min.js"></script>
+    <script src="~/help/vendor/aos/aos.js"></script>
+    <script src="~/help/vendor/owlcarousel/owl.carousel.min.js"></script>
+
+    <script src="~/help/js/main.js"></script>
+
+</body>
+
+</html>

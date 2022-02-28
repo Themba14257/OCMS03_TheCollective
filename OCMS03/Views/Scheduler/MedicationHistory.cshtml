@@ -1,0 +1,73 @@
+﻿@model IEnumerable<OCMS03.Models.CartLine>
+
+@{
+    ViewData["Title"] = "Vitalistroy";
+    Layout = "~/Views/Shared/_UsersLayout.cshtml";
+}
+
+<div class="header bg-white pb-1">
+    <div class="container-fluid">
+        <div class="header-body">
+            <div class="row align-items-center py-4">
+                <div class="col-lg-6 col-7">
+                    <h5 class="text-black-50 font-italic font-weight-bold d-inline-block mb-0"></h5>
+                    <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+                        <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                            <li class="breadcrumb-item"><a asp-controller="Doctor" asp-action="UserDetails"><i class="ni ni-single-02 text-yellow"></i></a></li>
+                            <li class="breadcrumb-item"><a asp-controller="Account" asp-action="UserDetails">Profile</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Details</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-xl-12 order-xl-1">
+    <div class="card">
+        <div class="card-header">
+            <div class="row align-items-center">
+                <div class="col-8">
+                    <h3 class="mb-0"> </h3>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="panel-body bio-graph-info">
+                <h1 class="text-center">Patient Vital history</h1>
+                <hr class="my-4" />
+                @foreach (var item in Model)
+                {
+                    <dl class="row text-right">
+                        <dt class="col-sm-4">
+                            <label class="control-label">Medication Name:</label>
+                        </dt>
+                        <dd class="col-sm-5 text-center">
+                            <span class="form-control-static">  @Html.DisplayFor(modelItem => item.Prescription.PrescriptionNotes)</span>
+                        </dd>
+                        <dt class="col-sm-4">
+                            <label class="control-label">Dose:</label>
+                        </dt>
+                        <dd class="col-sm-5 text-center">
+                            <span class="form-control-static">  @Html.DisplayFor(modelItem => item.Dose)</span>
+                        </dd>
+                        <dt class="col-sm-4">
+                            <label class="control-label">Frequency:</label>
+                        </dt>
+                        <dd class="col-sm-5 text-center">
+                            <span class="form-control-static"> @Html.DisplayFor(modelItem => item.Frequency)</span>
+                        </dd>
+                        <dt class="col-sm-4">
+                            <label class="control-label">Duration:</label>
+                        </dt>
+                        <dd class="col-sm-5 text-center">
+                            <span class="col-sm-8 form-control-static">@Html.DisplayFor(modelItem => item.Duration)</span>
+                        </dd>
+
+                    </dl>
+                }
+            </div>
+        </div>
+    </div>
+</div>    
